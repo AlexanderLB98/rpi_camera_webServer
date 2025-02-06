@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Video Streaming Demonstration</title>
+  </head>
+  <body>
+    <h1>Video Streaming Demonstration</h1>
+    <!-- Usar un div para la imagen en lugar de una etiqueta img -->
+    <div id="video-container"></div>
+
+    <script>
+      // Función para manejar el streaming de video
+      function handleVideoStream() {
+        const container = document.getElementById('video-container');
+        
+        // Configurar la URL del feed de video
+        const videoUrl = window.location.href + 'video_feed';
+        
+        // Crear un elemento img dinámicamente
+        const img = document.createElement('img');
+        img.src = videoUrl;
+        img.style.width = '100%';  // O tùy chỉnh el tamaño según necesidad
+        
+        container.appendChild(img);
+      }
+
+      // Llamar a la función cuando la página se carga
+      window.onload = handleVideoStream;
+    </script>
+  </body>
+</html>
